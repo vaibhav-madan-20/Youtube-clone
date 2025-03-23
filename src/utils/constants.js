@@ -4,7 +4,9 @@ export const YOUTUBE_API_URL = `https://youtube.googleapis.com/youtube/v3/videos
 
 export const YOUTUBE_API_SEARCH_URL = `https://www.googleapis.com/youtube/v3/search?key=${GOOGLE_API_KEY}&maxResults=50&part=snippet&type=video&q=`;
 
-export const YOUTUBE_SUGGESTIONS_API_URL = "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
-// export const YOUTUBE_SUGGESTIONS_API_URL = "http://crossorigin.me/http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
-
 export const LIVE_CHAT_COUNT = 25;
+
+export const YOUTUBE_SUGGESTIONS_API = "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
+const ApiKey = '330e0f7b7253db57';
+const EDUCORS_URL = 'https://educorssolver.host/api/getData';
+export const YOUTUBE_SUGGESTIONS_API_URL = `${EDUCORS_URL}?ApiKey=${ApiKey}&Target=${encodeURIComponent(YOUTUBE_SUGGESTIONS_API)}`;
