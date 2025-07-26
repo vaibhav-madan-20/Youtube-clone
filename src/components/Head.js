@@ -5,56 +5,56 @@ import hamburger_icon from "../assets/hamburger.png"
 import logo_icon from "../assets/logo.png";
 import search_icon from "../assets/search.png"
 import user_icon from "../assets/user.png"
-import { YOUTUBE_SUGGESTIONS_API_URL } from '../utils/constants';
+// import { YOUTUBE_SUGGESTIONS_API_URL } from '../utils/constants';
 
 import { toggleMenu } from '../utils/appSlice';
 import { Link, useNavigate } from 'react-router-dom';
-import { cacheResults } from '../utils/searchSlice';
+// import { cacheResults } from '../utils/searchSlice';
 
 const Head = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const cache = useSelector(store => store.search);
+    // const cache = useSelector(store => store.search);
     function toggleMenuHandler() {
         dispatch(toggleMenu());
     }
 
     const [searchQuery, setSearchQuery] = useState("");
-    const [suggestions, setSuggestions] = useState([]);
-    const [showSuggestions, setShowSuggestions] = useState(false);
+    // const [suggestions, setSuggestions] = useState([]);
+    // const [showSuggestions, setShowSuggestions] = useState(false);
 
-    const timerRef = useRef(null);
+    // const timerRef = useRef(null);
 
-    const handleYoutubeSuggestions = async (value) => {
-        value = value.trim();
-        if (!value.length) return;
+    // const handleYoutubeSuggestions = async (value) => {
+    //     value = value.trim();
+    //     if (!value.length) return;
 
-        if (timerRef.current) {
-            clearTimeout(timerRef.current);
-        }
+    //     if (timerRef.current) {
+    //         clearTimeout(timerRef.current);
+    //     }
 
-        if (cache[value]) {
-            setSuggestions(cache[value]);
-        } else {
-            timerRef.current = setTimeout(() => getYoutubeSuggestions(value), 200);
-        }
-    };
+    //     if (cache[value]) {
+    //         setSuggestions(cache[value]);
+    //     } else {
+    //         timerRef.current = setTimeout(() => getYoutubeSuggestions(value), 200);
+    //     }
+    // };
 
-    const getYoutubeSuggestions = async (value) => {
-        setShowSuggestions(true);
-        try {
-            const p = await fetch(YOUTUBE_SUGGESTIONS_API_URL + value);
-            const json = await p.json();
-            // console.log(json);
-            setSuggestions(json[1]);
-            dispatch(cacheResults({
-                [value]: json[1]
-            }))
-        }
-        catch (e) {
-            console.log(e);
-        }
-    }
+    // const getYoutubeSuggestions = async (value) => {
+    //     setShowSuggestions(true);
+    //     try {
+    //         const p = await fetch(YOUTUBE_SUGGESTIONS_API_URL + value);
+    //         const json = await p.json();
+    //         // console.log(json);
+    //         setSuggestions(json[1]);
+    //         dispatch(cacheResults({
+    //             [value]: json[1]
+    //         }))
+    //     }
+    //     catch (e) {
+    //         console.log(e);
+    //     }
+    // }
 
     /* 
     key - i
@@ -83,11 +83,11 @@ const Head = () => {
                 <div
                     className="flex flex-row w-full">
                     <input value={searchQuery}
-                        onFocus={() => setShowSuggestions(true)}
-                        onBlur={() => setShowSuggestions(false)}
+                        // onFocus={() => setShowSuggestions(true)}
+                        // onBlur={() => setShowSuggestions(false)}
                         onChange={e => {
                             setSearchQuery(e.target.value);
-                            handleYoutubeSuggestions(e.target.value);
+                            // handleYoutubeSuggestions(e.target.value);
                         }}
                         className="w-full px-5 py-2 border border-gray-200 rounded-l-full focus:border-blue-400 focus:outline-none"
                         placeholder="Search"
@@ -99,7 +99,7 @@ const Head = () => {
                     </button>
                 </div>
 
-                <ul onBlur={() => setShowSuggestions(false)}
+                {/* <ul onBlur={() => setShowSuggestions(false)}
                     className="absolute z-50 top-10 w-full max-w-xs bg-white border border-gray-300 rounded-md shadow-md">
                     {showSuggestions && searchQuery &&
                         suggestions.map(suggestion => (
@@ -114,7 +114,7 @@ const Head = () => {
                                 <span>{suggestion}</span>
                             </li>
                         ))}
-                </ul>
+                </ul> */}
             </div>
 
 

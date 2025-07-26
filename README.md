@@ -8,6 +8,8 @@ A React-based YouTube clone featuring real-time search suggestions, live chat si
 ---
 ![Search page](screenshots/2.png)
 ---
+![Watch page](screenshots/3.png)
+---
 
 ## Features
 

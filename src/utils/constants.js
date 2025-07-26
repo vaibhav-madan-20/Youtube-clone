@@ -6,7 +6,7 @@ export const YOUTUBE_API_SEARCH_URL = `https://www.googleapis.com/youtube/v3/sea
 
 export const LIVE_CHAT_COUNT = 25;
 
-export const YOUTUBE_SUGGESTIONS_API = "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
-const ApiKey = '330e0f7b7253db57';
-const EDUCORS_URL = 'https://educorssolver.host/api/getData';
-export const YOUTUBE_SUGGESTIONS_API_URL = `${EDUCORS_URL}?ApiKey=${ApiKey}&Target=${encodeURIComponent(YOUTUBE_SUGGESTIONS_API)}`;
+// export const YOUTUBE_SUGGESTIONS_API = "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
+// const ApiKey = '330e0f7b7253db57';
+// const EDUCORS_URL = 'https://educorssolver.host/api/getData';
+// export const YOUTUBE_SUGGESTIONS_API_URL = `${EDUCORS_URL}?ApiKey=${ApiKey}&Target=${encodeURIComponent(YOUTUBE_SUGGESTIONS_API)}`;
