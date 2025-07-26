@@ -2,6 +2,13 @@
 
 A React-based YouTube clone featuring real-time search suggestions, live chat simulation, and video playback functionality.
 
+## Screenshots
+
+![Home page](screenshots/1.png)
+---
+![Search page](screenshots/2.png)
+---
+
 ## Features
 
 - 🎥 Video playback with YouTube player integration
